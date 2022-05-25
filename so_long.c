@@ -6,7 +6,7 @@
 /*   By: nnorazma <nnorazma@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/19 17:41:55 by nnorazma          #+#    #+#             */
-/*   Updated: 2022/05/24 15:30:06 by nnorazma         ###   ########.fr       */
+/*   Updated: 2022/05/25 14:41:23 by nnorazma         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,9 @@ int	valid_file(char *file)
 	char *file_end;
 
 	file_end = ".ber";
-	//ft_strrncmp (reverse compare)
+	if (ft_strrncmp(file, file_end, 4))
+		return (1);
+	return (0);
 }
 
 int	main(int argc, char **argv)
