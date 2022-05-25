@@ -3,16 +3,16 @@
 /*                                                        :::      ::::::::   */
 /*   so_long.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: nnorazma <nnorazma@student.42.fr>          +#+  +:+       +#+        */
+/*   By: m4rrs <m4rrs@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/19 17:41:55 by nnorazma          #+#    #+#             */
-/*   Updated: 2022/05/25 14:41:23 by nnorazma         ###   ########.fr       */
+/*   Updated: 2022/05/25 23:13:06 by m4rrs            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "so_long.h"
 
-int	valid_file(char *file)
+static int	valid_file(char *file)
 {
 	char *file_end;
 
