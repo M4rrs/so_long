@@ -6,13 +6,13 @@
 /*   By: nnorazma <nnorazma@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/19 17:41:55 by nnorazma          #+#    #+#             */
-/*   Updated: 2022/05/26 17:11:39 by nnorazma         ###   ########.fr       */
+/*   Updated: 2022/05/26 18:06:54 by nnorazma         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "so_long.h"
 
-int	valid_file(char *file)
+static int	valid_file(char *file)
 {
 	char *file_end;
 
