@@ -6,7 +6,7 @@
 /*   By: nnorazma <nnorazma@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/19 17:41:55 by nnorazma          #+#    #+#             */
-/*   Updated: 2022/05/25 14:41:23 by nnorazma         ###   ########.fr       */
+/*   Updated: 2022/05/26 17:11:39 by nnorazma         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,4 +37,6 @@ int	main(int argc, char **argv)
 		exit(EXIT_FAILURE);
 	}
 	process_input(&data, argv[1]);
+	initialize_screen(&data);
+
 }
