@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   process_input.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: nnorazma <nnorazma@student.42.fr>          +#+  +:+       +#+        */
+/*   By: m4rrs <m4rrs@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/24 14:11:07 by nnorazma          #+#    #+#             */
-/*   Updated: 2022/05/26 16:20:39 by nnorazma         ###   ########.fr       */
+/*   Updated: 2022/05/30 00:06:40 by m4rrs            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,7 +33,10 @@ void check_width(t_data *data, int i, char *line)
 
 	width = ft_strlen(line);
 	if (data->width != width && (i > 0))
+	{
+		data->message = "ERROR. Map is not rectangular.\n";
 		return_error();
+	}
 	data->width = width;
 
 }

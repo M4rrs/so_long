@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   helpers.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: nnorazma <nnorazma@student.42.fr>          +#+  +:+       +#+        */
+/*   By: m4rrs <m4rrs@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/24 15:31:01 by nnorazma          #+#    #+#             */
-/*   Updated: 2022/05/25 14:39:41 by nnorazma         ###   ########.fr       */
+/*   Updated: 2022/05/29 23:54:41 by m4rrs            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,4 +27,9 @@ int	ft_strrncmp(char *s1, char *s2, int n)
 		j-- ;
 	}
 	return (0);
+}
+
+int	char_exists(t_data *data, char c)
+{
+	
 }

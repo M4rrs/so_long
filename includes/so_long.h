@@ -15,15 +15,16 @@ typedef struct	s_data
 	void *mlx_ptr;
 	void *win_ptr;
 	char **map;
+	char *message;
 	int	width;
 	int height;
 	int win_x;
 	int win_y;
 	int pos_x;
 	int	pos_y;
-	int player;
-	int exit;
-	int items;
+//	int player;
+//	int exit;
+//	int items;
 }	t_data;
 
 #endif

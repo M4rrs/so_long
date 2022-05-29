@@ -6,11 +6,11 @@
 /*   By: m4rrs <m4rrs@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/19 17:41:55 by nnorazma          #+#    #+#             */
-/*   Updated: 2022/05/29 18:42:33 by m4rrs            ###   ########.fr       */
+/*   Updated: 2022/05/29 18:52:13 by m4rrs            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "so_long.h"
+#include "includes/so_long.h"
 
 static int	valid_file(char *file)
 {
