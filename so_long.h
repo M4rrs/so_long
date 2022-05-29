@@ -19,16 +19,11 @@ typedef struct	s_data
 	int height;
 	int win_x;
 	int win_y;
-	int player_x;
-	int	player_y;
+	int pos_x;
+	int	pos_y;
 	int player;
 	int exit;
 	int items;
-	void *img_char;
-	void *img_tile;
-	void *img_item;
-	void *img_exit;
-	void *img_wall;
 }	t_data;
 
 #endif

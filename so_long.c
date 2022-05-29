@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   so_long.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: nnorazma <nnorazma@student.42.fr>          +#+  +:+       +#+        */
+/*   By: m4rrs <m4rrs@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/19 17:41:55 by nnorazma          #+#    #+#             */
-/*   Updated: 2022/05/28 16:29:59 by nnorazma         ###   ########.fr       */
+/*   Updated: 2022/05/29 18:42:33 by m4rrs            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -47,7 +47,5 @@ int	main(int argc, char **argv)
 	process_input(&data, argv[1]);
 	data.mlx_ptr = mlx_init();
 	data.win_ptr = mlx_new_window(data.mlx_ptr, data.win_x * 32, data.win_y * 32, "SO_LONG");
-	xpm_images(&data);
-	mlx_key_hook(data.win_ptr, key_hook, &data);
-	mlx_loop;
+	display_game(&data);
 }
