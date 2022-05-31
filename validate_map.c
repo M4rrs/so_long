@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   validate_map.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: m4rrs <m4rrs@student.42.fr>                +#+  +:+       +#+        */
+/*   By: nnorazma <nnorazma@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/26 15:51:58 by nnorazma          #+#    #+#             */
-/*   Updated: 2022/05/30 00:25:43 by m4rrs            ###   ########.fr       */
+/*   Updated: 2022/05/31 17:24:35 by nnorazma         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -55,6 +55,7 @@ int	valid_border(t_data *data)
 			return(1);
 		i++;
 	}
+	return (0);
 }
 
 void	check_cep(t_data *data)

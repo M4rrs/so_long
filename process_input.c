@@ -3,14 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   process_input.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: m4rrs <m4rrs@student.42.fr>                +#+  +:+       +#+        */
+/*   By: nnorazma <nnorazma@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/24 14:11:07 by nnorazma          #+#    #+#             */
-/*   Updated: 2022/05/30 00:06:40 by m4rrs            ###   ########.fr       */
+/*   Updated: 2022/05/31 14:21:53 by nnorazma         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "so_long.h"
+#include "includes/so_long.h"
 
 int	map_height(t_data *data, int fd)
 {
