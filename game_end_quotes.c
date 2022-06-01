@@ -1,27 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   exit_game.c                                        :+:      :+:    :+:   */
+/*   game_end_quotes.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: nnorazma <nnorazma@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/06/01 09:54:31 by nnorazma          #+#    #+#             */
-/*   Updated: 2022/06/01 11:20:25 by nnorazma         ###   ########.fr       */
+/*   Created: 2022/06/01 10:03:54 by nnorazma          #+#    #+#             */
+/*   Updated: 2022/06/01 10:07:54 by nnorazma         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "includes/so_long.h"
 
-int	exit_game(t_data *data)
+void	death_quote(void)
 {
-	int	i;
+	ft_putstr_fd("+==================================+\n", 1);
+	ft_putstr_fd("|      THE FOX HAS BEEN SLAIN.     |\n", 1);
+	ft_putstr_fd("+==================================+\n", 1);
+}
 
-	i = 0;
-	mlx_destroy_window(data->mlx_ptr, data->win_ptr);
-	while (i < data->height)
-		free(data->map[i++]);
-	free(data);
-	data = NULL;
-	exit(0);
-	return (0);
+void	win_quote(void)
+{
+	ft_putstr_fd("+==================================+\n", 1);
+	ft_putstr_fd("|    FOXY ESCAPED! CONGRATS! <3    |\n", 1);
+	ft_putstr_fd("+==================================+\n", 1);
 }

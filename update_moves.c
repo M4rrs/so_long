@@ -6,7 +6,7 @@
 /*   By: nnorazma <nnorazma@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/31 16:57:42 by nnorazma          #+#    #+#             */
-/*   Updated: 2022/05/31 18:16:24 by nnorazma         ###   ########.fr       */
+/*   Updated: 2022/06/01 11:33:35 by nnorazma         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,12 +23,15 @@ void	update_moves(t_data *data, int p_x, int p_y)
 	}
 	else if (data->map[p_y][p_x] == 'E')
 	{
-		if (char_exists(data, 'C')
+		if (char_exists(data, 'C'))
 		{
-			\\
-
+			win_quote();
+			exit_game(data);
 		}
 	}
+	data->moves++;
+	mlx_clear_window(data->mlx_ptr, data->win_ptr);
+	print_map(data);
 }
 
 int	key_hook(int key, t_data *data)
