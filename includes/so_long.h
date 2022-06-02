@@ -62,6 +62,9 @@ void	get_images(t_data	*data);
 void	print_images(t_data *data, int h, int w);
 void	display_game(t_data *data);
 
+//animation
+void	animate_player(t_data *data);
+
 //end game
 void	death_quote(void);
 void	win_quote(void);
