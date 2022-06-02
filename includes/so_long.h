@@ -33,8 +33,11 @@ typedef struct	s_data
 	int win_y;
 	int pos_x;
 	int	pos_y;
+	int img_h;
+	int img_w;
 	int	moves;
 	int frames;
+	int hit;
 	t_img	*img;
 }	t_data;
 
@@ -54,8 +57,8 @@ void	check_cep(t_data *data);
 
 //print map + update
 void	update_moves(t_data *data, int p_x, int p_y);
-int	print_map(t_data *data);
-void	get_images(t_data	*data, int img_w, int img_h);
+void	print_map(t_data *data);
+void	get_images(t_data	*data);
 void	print_images(t_data *data, int h, int w);
 void	display_game(t_data *data);
 

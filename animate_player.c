@@ -1,31 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   initialize_data.c                                  :+:      :+:    :+:   */
+/*   animate_player.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: nnorazma <nnorazma@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/05/28 14:27:51 by nnorazma          #+#    #+#             */
-/*   Updated: 2022/06/02 17:51:48 by nnorazma         ###   ########.fr       */
+/*   Created: 2022/06/02 17:33:33 by nnorazma          #+#    #+#             */
+/*   Updated: 2022/06/02 18:01:21 by nnorazma         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "so_long.h"
+#include "includes/so_long.h"
 
-void initialize_data(t_data *data)
+void	animate_player(t_data *data)
 {
-	data->message = NULL;
-	data->width = 0;
-	data->height = 0;
-	data->win_x = 0;
-	data->win_y = 0;
-	data->pos_x = 0;
-	data->pos_y = 0;
-	data->img_w = 0;
-	data->img_h = 0;
-	data->hit = 0;
-	data->frames = 0;
-	// data->player = 0;
-	// data->exit = 0;
-	// data->items = 0;
+	char	*ani;
+	char	*ani2;
+
+	ani = "./assets/foxy2";
+	ani2 = "./assets/foxy3";
+
+	if (data->frames < 15)
+	{
+		data->img->fox = mlx_xpm_file_to_image(data->mlx_ptr,
+						ani, &data->img_w, &data->img_h);
+	}
 }

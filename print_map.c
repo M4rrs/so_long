@@ -6,13 +6,13 @@
 /*   By: nnorazma <nnorazma@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/01 15:12:20 by nnorazma          #+#    #+#             */
-/*   Updated: 2022/06/02 16:25:37 by nnorazma         ###   ########.fr       */
+/*   Updated: 2022/06/02 17:44:25 by nnorazma         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "includes/so_long.h"
 
-void	get_images(t_data	*data, int img_w, int img_h)
+void	get_images(t_data	*data)
 {
 	char	*fox;
 	char	*apple;
@@ -26,15 +26,15 @@ void	get_images(t_data	*data, int img_w, int img_h)
 	grass = "./assets/grass.xpm";
 	exit = "./assets/exit.xpm";
 	data->img->fox = mlx_xpm_file_to_image(data->mlx_ptr, fox,
-					&img_w, &img_h);
+					&data->img_w, &data->img_h);
 	data->img->apple = mlx_xpm_file_to_image(data->mlx_ptr, apple,
-					&img_w, &img_h);
+					&data->img_w, &data->img_h);
 	data->img->stone = mlx_xpm_file_to_image(data->mlx_ptr, stone,
-					&img_w, &img_h);
+					&data->img_w, &data->img_h);
 	data->img->grass = mlx_xpm_file_to_image(data->mlx_ptr, grass,
-					&img_w, &img_h);
+					&data->img_w, &data->img_h);
 	data->img->exit = mlx_xpm_file_to_image(data->mlx_ptr, exit,
-					&img_w, &img_h);
+					&data->img_w, &data->img_h);
 }
 
 void	print_images(t_data *data, int h, int w)
@@ -61,16 +61,16 @@ void	print_images(t_data *data, int h, int w)
 	}
 }
 
-int	print_map(t_data *data)
+void	print_map(t_data *data)
 {
-	int	img_w;
-	int img_h;
+	// int	img_w;
+	// int img_h;
 	int h;
 	int w;
 
-	img_w = 0;
-	img_h = 0;
-	get_images(data, img_w, img_h);
+	// img_w = 0;
+	// img_h = 0;
+	get_images(data);
 
 	h = 0;
 	while (data->map[h])
@@ -89,5 +89,4 @@ int	print_map(t_data *data)
 		h++;
 		
 	}
-	return (0);
 }
