@@ -1,25 +1,27 @@
 NAME = so_long
-SRCS = *.c libft/*.c get_next_line/*.c
+SRCS = $(wildcard *.c)
 OBJS = ${SRCS:.c=.o}
 INCLUDE = -Iincludes -Imlx -Iget_next_line -Ilibft
-LIB = -lmlx 
-GNL = get_next_line
-CCFLAGS = -Wall -Werror -Wextra
+LIB = -lmlx -Llibft -lft
+CCFLAGS = -Wall -Werror -Wextra -fsanitize=address -g3
 CC = gcc
 FRAMEWORK = -framework OpenGL -framework AppKit
 
 all: ${NAME}
 
-${NAME} :
-	make re -C libft
-	@${CC} ${CCFLAGS} ${LIB} ${INCLUDE} ${SRCS} ${FRAMEWORK} -o $@
+${NAME} : ${OBJS} ${GNL}
+	@${CC} ${CCFLAGS} ${LIB} ${INCLUDE} $(addprefix obj/, ${OBJS}) ${FRAMEWORK} -o $@
+
+%.o : %.c
+	@mkdir -p obj
+	${CC} ${CCFLAGS} ${INCLUDE} -c $< -o obj/$@
 
 clean :
-	rm -f ${OBJS}
+	rm -rf obj
 
 fclean : clean
 	rm -rf ${NAME}
-	make fclean -C libft
+	# make fclean -C libft
 
 re : fclean all
 

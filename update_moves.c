@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   display_game.c                                     :+:      :+:    :+:   */
+/*   update_moves.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: nnorazma <nnorazma@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/31 16:57:42 by nnorazma          #+#    #+#             */
-/*   Updated: 2022/06/01 11:33:35 by nnorazma         ###   ########.fr       */
+/*   Updated: 2022/06/02 14:55:31 by nnorazma         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@ void	update_moves(t_data *data, int p_x, int p_y)
 	}
 	else if (data->map[p_y][p_x] == 'E')
 	{
-		if (char_exists(data, 'C'))
+		if (!char_exists(data, 'C'))
 		{
 			win_quote();
 			exit_game(data);
@@ -43,19 +43,20 @@ int	key_hook(int key, t_data *data)
 	else if (key == 0)
 		update_moves(data, data->pos_x - 1, data->pos_y);
 	else if (key == 2)
-		update_moves(data, data->pos_x + 1, data->pos_y - 1);
+		update_moves(data, data->pos_x + 1, data->pos_y);
 	else if (key == 53)
 	{
 		ft_putstr_fd("GAME OVER.\n", 1);
 		exit_game(data);
 	}
+	return (0);
 }
 
 void	display_game(t_data *data)
 {
-//	print_map() temporary before we add the enemy loop
+	print_map(data);
 	mlx_key_hook(data->win_ptr, key_hook, data);
 	mlx_hook(data->win_ptr, 17, 1L << 17, exit_game, data);
-//	mlx_loop_hook(data->mlx_ptr, render_loop, data);
+	mlx_loop_hook(data->mlx_ptr, print_map, data);
 	mlx_loop(data->mlx_ptr);
 }

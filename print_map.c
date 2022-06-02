@@ -6,7 +6,7 @@
 /*   By: nnorazma <nnorazma@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/01 15:12:20 by nnorazma          #+#    #+#             */
-/*   Updated: 2022/06/01 19:21:18 by nnorazma         ###   ########.fr       */
+/*   Updated: 2022/06/02 16:25:37 by nnorazma         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,11 +20,11 @@ void	get_images(t_data	*data, int img_w, int img_h)
 	char	*stone;
 	char	*exit;
 
-	fox = "fox.xpm";
-	apple = "apple.xpm";
-	stone = "stone.xpm";
-	grass = "grass.xpm";
-	exit = "exit.xpm";
+	fox = "./assets/foxy.xpm";
+	apple = "./assets/apple.xpm";
+	stone = "./assets/rock.xpm";
+	grass = "./assets/grass.xpm";
+	exit = "./assets/exit.xpm";
 	data->img->fox = mlx_xpm_file_to_image(data->mlx_ptr, fox,
 					&img_w, &img_h);
 	data->img->apple = mlx_xpm_file_to_image(data->mlx_ptr, apple,
@@ -61,7 +61,7 @@ void	print_images(t_data *data, int h, int w)
 	}
 }
 
-void	print_map(t_data *data)
+int	print_map(t_data *data)
 {
 	int	img_w;
 	int img_h;
@@ -70,14 +70,16 @@ void	print_map(t_data *data)
 
 	img_w = 0;
 	img_h = 0;
-	get_images(data->img, img_w, img_h);
+	get_images(data, img_w, img_h);
 
 	h = 0;
-	while (h < data->height)
+	while (data->map[h])
 	{
+		data->win_y = h;
 		w = 0;
-		while (w < data->width)
+		while (data->map[h][w])
 		{
+			data->win_x = w;
 			mlx_put_image_to_window(data->mlx_ptr, data->win_ptr,
 								data->img->grass, data->win_x * 32,
 								data->win_y * 32);
@@ -85,5 +87,7 @@ void	print_map(t_data *data)
 			w++;
 		}
 		h++;
+		
 	}
+	return (0);
 }
