@@ -6,16 +6,16 @@
 /*   By: nnorazma <nnorazma@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/26 15:51:58 by nnorazma          #+#    #+#             */
-/*   Updated: 2022/06/02 17:08:50 by nnorazma         ###   ########.fr       */
+/*   Updated: 2022/06/03 19:16:53 by nnorazma         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "includes/so_long.h"
 
-int valid_char(t_data *data, int h, int w)
+int	valid_char(t_data *data, int h, int w)
 {
-	if (data->map[h][w] != '0' && data->map[h][w] != '1' 
-		&& data->map[h][w] != 'C' && data->map[h][w] != 'E' 
+	if (data->map[h][w] != '0' && data->map[h][w] != '1'
+		&& data->map[h][w] != 'C' && data->map[h][w] != 'E'
 		&& data->map[h][w] != 'P' && data->map[h][w] != '<'
 		&& data->map[h][w] != '>' && data->map[h][w] != '^'
 		&& data->map[h][w] != 'v')
@@ -25,7 +25,7 @@ int valid_char(t_data *data, int h, int w)
 
 int	valid_border(t_data *data)
 {
-	int i;
+	int	i;
 
 	i = 0;
 	while (i < data->width - 1)

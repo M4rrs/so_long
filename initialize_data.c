@@ -6,13 +6,13 @@
 /*   By: nnorazma <nnorazma@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/28 14:27:51 by nnorazma          #+#    #+#             */
-/*   Updated: 2022/06/03 13:55:36 by nnorazma         ###   ########.fr       */
+/*   Updated: 2022/06/03 19:24:44 by nnorazma         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "so_long.h"
 
-void initialize_data(t_data *data)
+void	initialize_data(t_data *data)
 {
 	data->message = NULL;
 	data->width = 0;
@@ -26,4 +26,5 @@ void initialize_data(t_data *data)
 	data->frames = 0;
 	data->hit = 0;
 	data->loop = 0;
+	data->moves = 0;
 }

@@ -6,7 +6,7 @@
 /*   By: nnorazma <nnorazma@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/12 10:41:00 by nnorazma          #+#    #+#             */
-/*   Updated: 2022/04/12 10:41:01 by nnorazma         ###   ########.fr       */
+/*   Updated: 2022/06/03 19:10:49 by nnorazma         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -58,7 +58,7 @@ char	*ft_itoa(int n)
 		res[len--] = (nb % 10) + '0';
 		nb /= 10;
 	}
-	 return (res);
+	return (res);
 }
 
 //Intlen counts length of the integer, if n < 0, len++ = 1 for the '-' sign.

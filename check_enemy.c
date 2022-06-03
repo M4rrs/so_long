@@ -6,7 +6,7 @@
 /*   By: nnorazma <nnorazma@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/03 13:37:56 by nnorazma          #+#    #+#             */
-/*   Updated: 2022/06/03 15:36:44 by nnorazma         ###   ########.fr       */
+/*   Updated: 2022/06/03 19:27:45 by nnorazma         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,10 +23,10 @@ void	if_enemy(char **dup, t_data *data, int h, int w)
 	}
 }
 
-char **duplicate_map(t_data *data)
+char	**duplicate_map(t_data *data)
 {
-	int	i;
-	char **arr;
+	int		i;
+	char	**arr;
 
 	arr = (char **)malloc(sizeof(char *) * (data->height + 1));
 	if (!arr)
@@ -43,8 +43,8 @@ char **duplicate_map(t_data *data)
 
 void	check_enemy(t_data *data)
 {
-	int	h;
-	int	w;
+	int		h;
+	int		w;
 	char	**dup;
 
 	dup = duplicate_map(data);

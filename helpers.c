@@ -6,7 +6,7 @@
 /*   By: nnorazma <nnorazma@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/24 15:31:01 by nnorazma          #+#    #+#             */
-/*   Updated: 2022/06/03 14:34:50 by nnorazma         ###   ########.fr       */
+/*   Updated: 2022/06/03 19:25:31 by nnorazma         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,14 +14,14 @@
 
 int	ft_strrncmp(char *s1, char *s2, int n)
 {
-	int i;
-	int j;
+	int	i;
+	int	j;
 
 	i = ft_strlen(s1) - 1;
 	j = n;
-	while((s1[i] && i > n) && (s2[j] && j >= 0))
+	while ((s1[i] && i > n) && (s2[j] && j >= 0))
 	{
-		if(s1[i] != s2[j])
+		if (s1[i] != s2[j])
 			return (1);
 		i-- ;
 		j-- ;
