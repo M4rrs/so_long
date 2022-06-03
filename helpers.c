@@ -6,7 +6,7 @@
 /*   By: nnorazma <nnorazma@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/24 15:31:01 by nnorazma          #+#    #+#             */
-/*   Updated: 2022/06/02 11:28:36 by nnorazma         ###   ########.fr       */
+/*   Updated: 2022/06/03 14:34:50 by nnorazma         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -47,4 +47,14 @@ int	char_exists(t_data *data, char c)
 		h++;
 	}
 	return (0);
+}
+
+void	free_map(t_data *data)
+{
+	int	i;
+
+	i = 0;
+	while (i < data->height)
+		free(data->map[i++]);
+	free(data->map);
 }

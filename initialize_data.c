@@ -6,7 +6,7 @@
 /*   By: nnorazma <nnorazma@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/28 14:27:51 by nnorazma          #+#    #+#             */
-/*   Updated: 2022/06/02 17:51:48 by nnorazma         ###   ########.fr       */
+/*   Updated: 2022/06/03 13:55:36 by nnorazma         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,9 +23,7 @@ void initialize_data(t_data *data)
 	data->pos_y = 0;
 	data->img_w = 0;
 	data->img_h = 0;
-	data->hit = 0;
 	data->frames = 0;
-	// data->player = 0;
-	// data->exit = 0;
-	// data->items = 0;
+	data->hit = 0;
+	data->loop = 0;
 }

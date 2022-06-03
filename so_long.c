@@ -6,7 +6,7 @@
 /*   By: nnorazma <nnorazma@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/19 17:41:55 by nnorazma          #+#    #+#             */
-/*   Updated: 2022/06/02 14:09:46 by nnorazma         ###   ########.fr       */
+/*   Updated: 2022/06/03 13:10:05 by nnorazma         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,6 +39,6 @@ int	main(int argc, char **argv)
 	initialize_data(&data);
 	process_input(&data, argv[1]);
 	data.mlx_ptr = mlx_init();
-	data.win_ptr = mlx_new_window(data.mlx_ptr, data.width * 32, data.height * 32, "SO_LONG");
+	data.win_ptr = mlx_new_window(data.mlx_ptr, (data.width + 4) * 32, data.height * 32, "SO_LONG");
 	display_game(&data);
 }

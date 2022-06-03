@@ -19,6 +19,7 @@ typedef struct	s_img
 	void	*stone;
 	void	*exit;
 	void	*snake;
+	void	*dirt;
 }	t_img;
 
 typedef struct	s_data
@@ -37,9 +38,12 @@ typedef struct	s_data
 	int img_w;
 	int	moves;
 	int frames;
+	int	loop;
 	int hit;
 	t_img	*img;
 }	t_data;
+//	Frames are for the main animation loop;
+//	Loop is used for enemy checking and movement;
 
 void	return_error(t_data *data);
 void initialize_data(t_data *data);
@@ -62,6 +66,12 @@ void	get_images(t_data	*data);
 void	print_images(t_data *data, int h, int w);
 void	display_game(t_data *data);
 
+//enemy and death
+char **duplicate_map(t_data *data);
+char **kill_player(char **dup, t_data *data, int h, int w);
+char	**update_enemy(char	**dup, int h, int w);
+void	check_enemy(t_data *data);
+
 //animation
 void	animate_player(t_data *data);
 
@@ -73,5 +83,6 @@ int	exit_game(t_data *data);
 //helpers
 int	ft_strrncmp(char *s1, char *s2, int n);
 int	char_exists(t_data *data, char c);
+void	free_map(t_data *data);
 
 #endif

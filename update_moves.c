@@ -6,7 +6,7 @@
 /*   By: nnorazma <nnorazma@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/31 16:57:42 by nnorazma          #+#    #+#             */
-/*   Updated: 2022/06/02 18:01:42 by nnorazma         ###   ########.fr       */
+/*   Updated: 2022/06/03 15:14:21 by nnorazma         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -53,8 +53,9 @@ int	key_hook(int key, t_data *data)
 }
 int	render_loop(t_data	*data)
 {
-	print_map(data);
+	// print_map(data);
 	data->frames++;
+	check_enemy(data);
 	if (data->hit == 0)
 	{
 		animate_player(data);
@@ -64,7 +65,6 @@ int	render_loop(t_data	*data)
 
 void	display_game(t_data *data)
 {
-	//print_map(data);
 	mlx_key_hook(data->win_ptr, key_hook, data);
 	mlx_hook(data->win_ptr, 17, 1L << 17, exit_game, data);
 	mlx_loop_hook(data->mlx_ptr, render_loop, data);
